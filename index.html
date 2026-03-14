@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Θανάσης Γιαννουλής | Συστημικός Ψυχοθεραπευτής Παγκράτι</title>
+    <meta name="description" content="Ο Θανάσης Γιαννουλής είναι Σύμβουλος Ψυχικής Υγείας & Συστημικός Θεραπευτής στο Παγκράτι. Ατομική ψυχοθεραπεία, διαχείριση άγχους, θεραπεία ζεύγους & συμβουλευτική.">
+    <meta name="keywords" content="Συστημικός Θεραπευτής Παγκράτι, Σύμβουλος Ψυχικής Υγείας, Ψυχοθεραπεία, Θεραπεία Ζεύγους, Θανάσης Γιαννουλής, Διαχείριση άγχους, Διαχείριση πένθους, Οικογενειακή Θεραπεία">
+    <meta name="author" content="Advon Media">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="icon" href="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-8.jpg?raw=true" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cosmic: {
+                            void: '#050B14',      /* Deep Space Black/Blue */
+                            navy: '#0B132B',      /* Dark Navy */
+                            purple: '#4C1D95',    /* Deep Nebula Purple */
+                            amethyst: '#8B5CF6',  /* Bright Purple */
+                            lavender: '#C4B5FD',  /* Soft Lavender */
+                            peach: '#FFEDD5',     /* Warm Starlight Peach */
+                            rose: '#FDA4AF',      /* Soft Cosmic Rose */
+                            pearl: '#F8FAFC',     /* Off-white */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(76, 29, 149, 0.1)',
+                        'glow-purple': '0 0 40px -10px rgba(139, 92, 246, 0.5)',
+                        'glow-rose': '0 0 40px -10px rgba(253, 164, 175, 0.4)',
+                    },
+                    animation: {
+                        'blob': 'blob 12s infinite',
+                        'blob-slow': 'blob 18s infinite reverse',
+                        'marquee': 'marquee 45s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(40px, -60px) scale(1.1)' },
+                            '66%': { transform: 'translate(-30px, 30px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Smooth Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050B14; }
+        ::-webkit-scrollbar-thumb { background: #4C1D95; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B5CF6; }
+
+        /* Greek Uppercase (No Accents) */
+        .no-accents { text-transform: uppercase; }
+
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(50px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+
+        .reveal-left { opacity: 0; transform: translateX(-50px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        
+        .reveal-right { opacity: 0; transform: translateX(50px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        /* Glassmorphism */
+        .glass-dark {
+            background: rgba(11, 19, 43, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-light {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Hero Image Arch & Glow */
+        .hero-arch-image {
+            border-radius: 150px 150px 20px 20px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .hero-arch-image:hover {
+            transform: scale(1.03);
+        }
+
+        /* Marquee */
+        .marquee-container {
+            display: flex;
+            width: fit-content;
+        }
+        .marquee-container:hover {
+            animation-play-state: paused;
+        }
+
+        /* Masonry Gallery Fallback */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Lightbox */
+        #lightbox {
+            opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+            backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+        }
+        #lightbox.active { opacity: 1; pointer-events: auto; }
+        #lightbox img { transform: scale(0.95); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        #lightbox.active img { transform: scale(1); }
+
+        /* Portrait Moving Effect */
+        .portrait-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+        }
+        .portrait-img {
+            transition: transform 1.5s ease;
+        }
+        .portrait-container:hover .portrait-img {
+            transform: scale(1.08) rotate(-1deg);
+        }
+    </style>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-cosmic-void text-cosmic-pearl font-sans antialiased overflow-x-hidden selection:bg-cosmic-amethyst selection:text-white">
+
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none opacity-60 mix-blend-screen">
+        <div class="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-cosmic-purple/20 filter blur-[120px] animate-blob"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-cosmic-amethyst/10 filter blur-[150px] animate-blob-slow"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-6">
+            <div class="glass-dark rounded-full flex justify-between items-center px-8 py-4 shadow-glass transition-all duration-300">
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="flex flex-col">
+                        <span class="text-xl font-serif font-bold text-white tracking-wider no-accents group-hover:text-cosmic-lavender transition-colors">ΘΑΝΑΣΗΣ ΓΙΑΝΝΟΥΛΗΣ</span>
+                        <span class="text-xs text-cosmic-lavender tracking-widest no-accents">Συστημικος Θεραπευτης</span>
+                    </div>
+                </a>
+                
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide no-accents">Η ΠΡΟΣΕΓΓΙΣΗ</a>
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide no-accents">ΥΠΗΡΕΣΙΕΣ</a>
+                    <a href="#pillars" class="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide no-accents">ΠΥΛΩΝΕΣ</a>
+                    <a href="#space" class="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide no-accents">Ο ΧΩΡΟΣ</a>
+                    <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1&acdpid=78642&autobook-dpid=78642" target="_blank" rel="noopener" class="px-7 py-3 bg-white text-cosmic-void rounded-full text-sm font-bold hover:bg-cosmic-lavender hover:shadow-glow-purple transition-all transform hover:-translate-y-1 flex items-center gap-2 no-accents">
+                        ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+
+                <button class="lg:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="absolute top-full left-0 w-full bg-cosmic-navy/95 backdrop-blur-2xl shadow-2xl hidden flex-col items-center py-10 space-y-8 border-t border-white/10">
+            <a href="#about" class="text-lg font-medium text-white tracking-wider no-accents mobile-link">Η ΠΡΟΣΕΓΓΙΣΗ</a>
+            <a href="#services" class="text-lg font-medium text-white tracking-wider no-accents mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
+            <a href="#pillars" class="text-lg font-medium text-white tracking-wider no-accents mobile-link">ΠΥΛΩΝΕΣ</a>
+            <a href="#space" class="text-lg font-medium text-white tracking-wider no-accents mobile-link">Ο ΧΩΡΟΣ</a>
+            <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1" target="_blank" class="px-8 py-4 bg-white text-cosmic-void rounded-full text-lg font-bold tracking-wider no-accents mobile-link">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 overflow-hidden bg-cosmic-void">
+        <svg class="absolute top-10 left-0 w-1/2 h-auto opacity-30 pointer-events-none z-0 animate-float" viewBox="0 0 500 200" fill="none">
+            <path d="M0 100 C 150 200, 300 0, 500 100" stroke="rgba(196, 181, 253, 0.4)" stroke-width="2" fill="none"/>
+            <path d="M0 120 C 180 220, 280 -20, 500 120" stroke="rgba(139, 92, 246, 0.2)" stroke-width="1" fill="none"/>
+        </svg>
+        <svg class="absolute bottom-20 right-0 w-2/3 h-auto opacity-30 pointer-events-none z-0 animate-float" style="animation-delay: -3s;" viewBox="0 0 600 200" fill="none">
+            <path d="M0 100 C 200 0, 400 200, 600 50" stroke="rgba(253, 164, 175, 0.3)" stroke-width="2" fill="none"/>
+            <path d="M0 80 C 220 -20, 380 220, 600 30" stroke="rgba(255, 237, 213, 0.2)" stroke-width="1" fill="none"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto w-full grid lg:flex lg:flex-row flex-col-reverse gap-16 items-center relative z-10">
+            
+            <div class="lg:w-1/2 reveal-left">
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-light text-cosmic-lavender text-sm font-medium mb-8 border-cosmic-purple/30">
+                    <span class="w-2 h-2 rounded-full bg-cosmic-rose animate-pulse"></span>
+                    ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ | ΠΑΓΚΡΑΤΙ
+                </div>
+                
+                <h1 class="text-5xl lg:text-7xl font-serif text-white leading-[1.1] mb-6 tracking-wide drop-shadow-2xl">
+                    Χτίζοντας Γέφυρες στις <span class="text-transparent bg-clip-text bg-gradient-to-r from-cosmic-lavender to-cosmic-rose italic">Σχέσεις μας.</span>
+                </h1>
+                
+                <p class="text-xl font-serif italic text-gray-300 mb-8 max-w-lg">
+                    Συστημική Θεραπεία & Ενσυναίσθηση
+                </p>
+
+                <div class="flex items-center gap-4 mb-10 text-sm text-gray-400 font-medium tracking-widest no-accents">
+                    <span>ΑΤΟΜΙΚΗ ΘΕΡΑΠΕΙΑ</span>
+                    <div class="w-px h-4 bg-gray-600"></div>
+                    <span>ΖΕΥΓΑΡΙΑ</span>
+                    <div class="w-px h-4 bg-gray-600"></div>
+                    <span>ΟΙΚΟΓΕΝΕΙΑ</span>
+                </div>
+                
+                <div class="flex flex-wrap items-center gap-5">
+                    <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1" target="_blank" class="px-8 py-4 bg-white text-cosmic-navy rounded-full font-bold hover:bg-cosmic-peach transition-colors shadow-glow-purple flex items-center gap-3 group">
+                        ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
+                        <i data-lucide="calendar" class="w-5 h-5 group-hover:scale-110 transition-transform"></i>
+                    </a>
+                    <a href="#about" class="px-8 py-4 bg-transparent border border-white/20 text-white rounded-full font-medium hover:border-cosmic-lavender hover:bg-white/5 transition-all backdrop-blur-md">
+                        ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 relative flex justify-center lg:justify-end reveal-right">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-cosmic-amethyst/30 rounded-full blur-[80px] z-0"></div>
+                
+                <div class="relative z-10 w-full max-w-[480px]">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-9.jpg?raw=true" alt="Θανάσης Γιαννουλής" class="w-full h-auto object-cover hero-arch-image">
+                    
+                    <div class="absolute -bottom-8 -left-8 lg:-left-12 glass-dark p-5 rounded-2xl shadow-2xl flex items-center gap-4 border border-white/10 animate-float backdrop-blur-xl">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cosmic-purple to-cosmic-amethyst flex items-center justify-center text-white shadow-lg shrink-0">
+                            <i data-lucide="network" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-white tracking-wider">Συστημική Οπτική</p>
+                            <p class="text-xs text-cosmic-lavender mt-1">ΑΚΜΑ & Παν. Θεσσαλίας</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-50 hover:opacity-100 transition-opacity z-20">
+            <span class="text-xs tracking-[0.2em] text-white mb-2 no-accents">SCROLL</span>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-white animate-bounce"></i>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 px-6 bg-cosmic-navy relative border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+            
+            <div class="lg:col-span-5 relative reveal-left">
+                <div class="portrait-container shadow-glow-purple border border-white/10 glass-light p-2">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-8.jpg?raw=true" alt="Πορτρέτο Θανάση Γιαννουλή" class="w-full h-auto object-cover rounded-[24px] portrait-img opacity-95">
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 border border-cosmic-rose/30 rounded-full z-0 animate-spin" style="animation-duration: 20s;"></div>
+            </div>
+
+            <div class="lg:col-span-7 reveal-right">
+                <span class="text-cosmic-rose font-medium tracking-widest text-sm uppercase no-accents">Η ΦΙΛΟΣΟΦΙΑ ΜΟΥ</span>
+                <h2 class="text-4xl lg:text-5xl font-serif text-white mt-4 mb-8 leading-tight">Ο άνθρωπος δεν είναι ποτέ αποκομμένος από το περιβάλλον του.</h2>
+                
+                <div class="space-y-6 text-lg text-gray-300 font-light leading-relaxed">
+                    <p>
+                        Ο <strong>Θανάσης Γιαννουλής</strong> είναι Σύμβουλος Ψυχικής Υγείας και Συστημικός Θεραπευτής, διατηρώντας το ιδιωτικό του γραφείο στο Παγκράτι (ψ. Συστημική Θεραπεία). Η επιστημονική του διαδρομή ξεχωρίζει καθώς συνδυάζει οργανικά την Ψυχολογία με την Ειδική Αγωγή.
+                    </p>
+                    <p>
+                        Ξεκινώντας από το Παιδαγωγικό Τμήμα Ειδικής Αγωγής (2009) και ολοκληρώνοντας το Μεταπτυχιακό του στη «Συμβουλευτική στην Ειδική Αγωγή, την Εκπαίδευση και την Υγεία» στο Πανεπιστήμιο Θεσσαλίας (2014), απέκτησε βαθιά κατανόηση των αναπτυξιακών και μαθησιακών προκλήσεων. Έχει εργαστεί ως σχολικός ψυχολόγος σε δομές Ειδικής Αγωγής (Ε.Ε.Ε.Ε.Κ) με εφήβους και ενήλικες με αναπηρία, καθώς και στα Εξωτερικά Ιατρεία του Αχιλλοπούλειου Νοσοκομείου Βόλου.
+                    </p>
+                    <p>
+                        Η κλινική του ταυτότητα εδραιώθηκε μέσα από την πολυετή εκπαίδευσή του (2018-2021) στη Συστημική Ψυχοθεραπεία στο ιστορικό <strong>Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (ΑΚΜΑ)</strong>. Σήμερα, εμβαθύνει περαιτέρω στη Θεραπεία Οικογένειας και Ομάδας, ενώ αποτελεί και συντονιστής εκπαιδευτικών ομάδων στο ΑΚΜΑ.
+                    </p>
+                    <blockquote class="border-l-2 border-cosmic-lavender pl-6 py-2 my-8 text-xl font-serif text-white italic">
+                        Στο γραφείο δημιουργείται ένα ασφαλές πλαίσιο όπου ενήλικες, ζευγάρια και γονείς μπορούν να κατανοήσουν τα μοτίβα των σχέσεών τους, να διαχειριστούν το άγχος ή το πένθος και να βρουν νέους, λειτουργικούς τρόπους επικοινωνίας.
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 px-6 bg-cosmic-void relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-cosmic-purple/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-cosmic-lavender font-medium tracking-widest text-sm uppercase no-accents">ΕΞΕΙΔΙΚΕΥΣΕΙΣ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mt-4 mb-6">Υπηρεσίες Θεραπείας</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-cosmic-purple to-cosmic-rose mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <div class="glass-light p-10 rounded-3xl group relative overflow-hidden reveal border border-white/5 hover:border-cosmic-purple/50 transition-colors duration-500">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-cosmic-purple/20 rounded-full blur-[40px] group-hover:bg-cosmic-purple/40 transition-colors duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm text-cosmic-lavender group-hover:scale-110 group-hover:bg-cosmic-purple transition-all duration-500">
+                            <i data-lucide="user" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-4">Ατομική Ψυχοθεραπεία & Διαχείριση Κρίσεων</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed">
+                            Η ατομική θεραπεία αποτελεί έναν χώρο προσωπικής ανασύνταξης. Προσεγγίζουμε τις κρίσεις πανικού, τις ειδικές φοβίες και το χρόνιο στρες όχι ως "ελαττώματα", αλλά ως μηνύματα που ζητούν αποκωδικοποίηση. Παράλληλα, παρέχεται εξειδικευμένη υποστήριξη για την ομαλή διαχείριση της απώλειας και του πένθους.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-lavender text-xs rounded-full">Ατομικές (60')</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-lavender text-xs rounded-full">Άγχος / Πανικός</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-lavender text-xs rounded-full">Πένθος</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-light p-10 rounded-3xl group relative overflow-hidden reveal reveal-delay-1 border border-white/5 hover:border-cosmic-rose/50 transition-colors duration-500">
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-cosmic-rose/10 rounded-full blur-[40px] group-hover:bg-cosmic-rose/30 transition-colors duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm text-cosmic-rose group-hover:scale-110 group-hover:bg-cosmic-rose group-hover:text-cosmic-void transition-all duration-500">
+                            <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-4">Θεραπεία Ζεύγους, Γάμου & Οικογένειας</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed">
+                            Στη Συστημική θεραπεία, η εστίαση βρίσκεται στη σχέση και την αλληλεπίδραση. Δουλεύουμε συνεργατικά για να εντοπίσουμε τα δυσλειτουργικά μοτίβα επικοινωνίας που οδηγούν σε συγκρούσεις. Μέσα από τη συμβουλευτική γονέων, ενδυναμώνουμε τον γονεϊκό ρόλο και βελτιώνουμε το κλίμα στο σπίτι.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-rose text-xs rounded-full">Ζεύγος (60')</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-rose text-xs rounded-full">Γονείς - Παιδιά</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-light p-10 rounded-3xl group relative overflow-hidden reveal border border-white/5 hover:border-cosmic-peach/50 transition-colors duration-500">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-cosmic-peach/10 rounded-full blur-[40px] group-hover:bg-cosmic-peach/20 transition-colors duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm text-cosmic-peach group-hover:scale-110 group-hover:bg-cosmic-peach group-hover:text-cosmic-void transition-all duration-500">
+                            <i data-lucide="puzzle" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-4">Παιδιά, Έφηβοι & Ειδική Αγωγή</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed">
+                            Αξιοποιώντας ισχυρό υπόβαθρο στην Ειδική Αγωγή, αναλαμβάνουμε περιστατικά παιδιών (έως 12 ετών) και εφήβων. Είτε πρόκειται για σχολικό άγχος είτε για μαθησιακές/αναπτυξιακές προκλήσεις, η προσέγγιση προσαρμόζεται στην ηλικία του παιδιού, εμπλέκοντας το οικογενειακό σύστημα.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-peach text-xs rounded-full">Παιδιά (έως 12)</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-peach text-xs rounded-full">Έφηβοι (60')</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-cosmic-peach text-xs rounded-full">Ειδική Αγωγή</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-light p-10 rounded-3xl group relative overflow-hidden reveal reveal-delay-1 border border-white/5 hover:border-white/50 transition-colors duration-500">
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full blur-[40px] group-hover:bg-white/10 transition-colors duration-700"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-6 backdrop-blur-sm text-white group-hover:scale-110 group-hover:bg-white group-hover:text-cosmic-void transition-all duration-500">
+                            <i data-lucide="monitor-smartphone" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-white mb-4">Διαδικτυακή Θεραπεία & Προσβασιμότητα</h3>
+                        <p class="text-gray-400 mb-6 text-base leading-relaxed">
+                            Οι υπηρεσίες προσφέρονται και διαδικτυακά (Online) για άτομα εκτός Αθηνών ή όσους προτιμούν τον χώρο τους. Αναγνωρίζοντας τις κοινωνικές ανάγκες, παρέχεται ειδική τιμολογιακή πολιτική (συνεδρίες 45') για φοιτητές και ανέργους.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-white text-xs rounded-full">Online (60')</span>
+                            <span class="px-3 py-1 bg-white/5 border border-white/10 text-white text-xs rounded-full">Ειδικό κόστος (45')</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="pillars" class="py-32 px-6 bg-cosmic-navy relative border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 reveal">
+                <div class="max-w-2xl">
+                    <span class="text-cosmic-amethyst font-medium tracking-widest text-sm uppercase no-accents">Η ΘΕΡΑΠΕΥΤΙΚΗ ΜΟΥ ΤΑΥΤΟΤΗΤΑ</span>
+                    <h2 class="text-4xl md:text-5xl font-serif text-white mt-4 mb-6">Οι 4 Πυλώνες της Πρακτικής μου</h2>
+                    <p class="text-gray-400 text-lg">Θεμέλια αξιοπιστίας, επιστημονικής εγκυρότητας και βαθιάς ενσυναίσθησης.</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-cosmic-void p-8 rounded-3xl border border-white/5 hover:border-cosmic-lavender/40 transition-all duration-500 group reveal">
+                    <div class="text-5xl mb-6">🏛️</div>
+                    <h4 class="text-xl font-bold text-white mb-4 font-serif">Εκπαίδευση στο ΑΚΜΑ</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Η εκπαίδευσή μου και ο ρόλος μου ως συντονιστής στο Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (το ιστορικότερο κέντρο Συστημικής σκέψης στην Ελλάδα) εγγυάται το βάθος της προσέγγισης.
+                    </p>
+                </div>
+
+                <div class="bg-cosmic-void p-8 rounded-3xl border border-white/5 hover:border-cosmic-rose/40 transition-all duration-500 group reveal reveal-delay-1 lg:translate-y-8">
+                    <div class="text-5xl mb-6">🧩</div>
+                    <h4 class="text-xl font-bold text-white mb-4 font-serif">Ειδική Αγωγή</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Η πορεία μου ως σχολικός ψυχολόγος προσφέρει σπάνια, πρακτική ενσυναίσθηση για τις δυσκολίες παιδιών, εφήβων και γονέων στο σχολικό και κοινωνικό πλαίσιο.
+                    </p>
+                </div>
+
+                <div class="bg-cosmic-void p-8 rounded-3xl border border-white/5 hover:border-cosmic-peach/40 transition-all duration-500 group reveal reveal-delay-2">
+                    <div class="text-5xl mb-6">🏥</div>
+                    <h4 class="text-xl font-bold text-white mb-4 font-serif">Κλινική Εμπειρία</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Η θητεία μου στο Αχιλλοπούλειο Νοσοκομείο και σε δομές Ε.Ε.Ε.Ε.Κ έχει θωρακίσει την ικανότητά μου να διαχειρίζομαι με ψυχραιμία σύνθετες ψυχικές και αναπτυξιακές κρίσεις.
+                    </p>
+                </div>
+
+                <div class="bg-cosmic-void p-8 rounded-3xl border border-white/5 hover:border-white/40 transition-all duration-500 group reveal reveal-delay-3 lg:translate-y-8">
+                    <div class="text-5xl mb-6">🔄</div>
+                    <h4 class="text-xl font-bold text-white mb-4 font-serif">Συστημική Οπτική</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Δεν βλέπω τον άνθρωπο ως μια "απομονωμένη μονάδα". Η λύση βρίσκεται πάντα στη βελτίωση των σχέσεών μας με τους κύκλους μας (οικογένεια, εργασία, κοινωνία).
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="space" class="py-32 px-6 bg-cosmic-void relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-cosmic-lavender font-medium tracking-widest text-sm uppercase no-accents">ΤΟ ΠΕΡΙΒΑΛΛΟΝ ΜΑΣ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-white mt-4 mb-6">Ο Χώρος στο Παγκράτι</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Ένας χώρος ζεστός, ασφαλής και φιλόξενος, σχεδιασμένος για να διευκολύνει την έκφραση και την εσωτερική αναζήτηση.</p>
+            </div>
+
+            <div class="masonry-grid w-full mx-auto pb-10">
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-10.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-10.jpg?raw=true" alt="Γραφείο Παγκράτι" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal reveal-delay-1" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-11.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-11.jpg?raw=true" alt="Χώρος Συνεδριών" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal reveal-delay-2" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-12.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-12.jpg?raw=true" alt="Γραφείο Λεπτομέρεια" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-13.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-13.jpg?raw=true" alt="Ψυχοθεραπευτικό Πλαίσιο" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal reveal-delay-1" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-4.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-4.jpg?raw=true" alt="Χώρος Υποδοχής" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal reveal-delay-2" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-5.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-5.jpg?raw=true" alt="Διακόσμηση Χώρου" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-6.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-6.jpg?raw=true" alt="Καθιστικό Θεραπείας" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="masonry-item rounded-2xl overflow-hidden group relative cursor-zoom-in reveal reveal-delay-1" onclick="openLightbox('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-7.jpg?raw=true')">
+                    <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-7.jpg?raw=true" alt="Γραφείο Άποψη" class="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 group-hover:brightness-75">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i data-lucide="maximize-2" class="w-8 h-8 text-white drop-shadow-lg"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-cosmic-void/95 flex items-center justify-center cursor-zoom-out" onclick="closeLightbox()">
+        <button class="absolute top-6 right-6 text-white/50 hover:text-white transition-colors" onclick="closeLightbox()">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Enlarged View" class="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl cursor-default" onclick="event.stopPropagation()">
+    </div>
+
+    <section id="reviews" class="py-24 bg-cosmic-navy overflow-hidden border-t border-white/5 relative">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center reveal">
+            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime Logo" class="h-8 mx-auto mb-6 opacity-80 invert">
+            <h2 class="text-4xl font-serif text-white mb-4">Εμπειρίες Θεραπευόμενων</h2>
+            <p class="text-gray-400">Η εμπιστοσύνη σας είναι η μεγαλύτερη απόδειξη της δουλειάς μας.</p>
+        </div>
+
+        <div class="w-full overflow-hidden relative pb-10">
+            <div class="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-cosmic-navy to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-cosmic-navy to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="marquee-container animate-marquee">
+                <div class="flex space-x-6 px-3">
+                    
+                    <script>
+                        const reviews = [
+                            { score: '10.0', name: 'Μιχάλης', count: '1', text: 'Έδειξε κατανόηση σεβασμό ενέπνευσε εμπιστοσύνη έδειξε να καταλαβαίνει σε βάθος τα προβλήματα που με απασχολούν κεφάνι και να γνωρίζει τα εργαλεία της δουλειάς του...', date: '09 Ιανουαρίου 2026' },
+                            { score: '9.6', name: 'Δημήτρης', count: '1', text: 'Από την πρώτη μου συνεδρία κατάλαβα ότι είναι ένας άνθρωπος που πραγματικά νοιαζεται για τον θεραπευόμενο και ότι μπορεί να μου παρέχει τη βοήθεια που χρειάζομαι.', date: '09 Δεκεμβρίου 2025' },
+                            { score: '10.0', name: 'Μάνος', count: '1', text: 'Εξαιρετικός επαγγελματιας με κατανόηση και όρεξη να εμβαθύνει. Εμπνέει εμπιστοσύνη και αυτό βοηθάει να ανοίγεσαι περισσότερο', date: '20 Νοεμβρίου 2025' },
+                            { score: '10.0', name: 'Θοδωρής', count: '1', text: 'Εξαιρετικά ευφυής, με βαθιά γνώση του αντικειμένου. Ειλικρινής προσέγγιση εις βάθος.', date: '06 Οκτωβρίου 2025' },
+                            { score: '10.0', name: 'Νίκος', count: '1', text: 'επαγγελματιας και πανω απο ολα ανθρώπος', date: '03 Οκτωβρίου 2025' },
+                            { score: '10.0', name: 'Χάρης', count: '1', text: 'Συστήνεται ανεπιφύλακτα..ανθρωπινη προσέγγιση και σίγουρα ο κατάλληλος άνθρωπος για όσους θέλουν, νιώθουν, χρειάζονται να μιλήσουν και να συνοδοιπόρο σε ότι τους απασχολεί.', date: '25 Σεπτεμβρίου 2025' },
+                            { score: '10.0', name: 'Αναστασία', count: '1', text: 'Ο Θανάσης είναι εξαιρετικός άνθρωπος με ενδιαφέρον και ενσυναίσθηση για τον θεραπευόμενο του.Απο την πρώτη στιγμή με έκανε να νιώσω άνετα και ασφάλεια...', date: '01 Σεπτεμβρίου 2025' },
+                            { score: '10.0', name: 'Πάνος', count: '1', text: 'Ο Θανάσης εμπνέει εμπιστοσύνη και βοηθάει πολύ. Συστήνω ανεπιφύλακτα τις θεραπείες μαζι του, και είμαι πολύ ικανοποιημένος από τις ατομικές θεραπείες και τα αποτελέσματα...', date: '22 Ιουλίου 2025' },
+                            { score: '10.0', name: 'Γιώργος', count: '2', text: 'Ο Θανάσης είναι επαγγελματίας και πάνω από όλα άνθρωπος, από την πρώτη στιγμή με έκανε να νιώσω εμπιστοσύνη και άνετα. Φαίνεται πόσο ενδιαφέρεται για τη δουλειά του...', date: '12 Ιουνίου 2025' },
+                            { score: '10.0', name: 'Χρήστος', count: '3', text: 'Ο Θανάσης είναι πολύ καλός, τον συστήνω ανεπιφύλακτα.', date: '16 Απριλίου 2025' }
+                        ];
+
+                        const createReviewCard = (review) => `
+                            <div class="w-80 md:w-96 glass-light p-8 rounded-3xl shrink-0 border border-white/5 relative flex flex-col justify-between h-full">
+                                <div>
+                                    <div class="flex justify-between items-start mb-6">
+                                        <div>
+                                            <div class="flex items-center gap-1 text-yellow-500 mb-1">
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                            </div>
+                                            <span class="font-bold text-white text-lg">${review.score} / 10</span>
+                                        </div>
+                                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-5 opacity-40 invert" alt="DA">
+                                    </div>
+                                    <p class="text-gray-300 text-sm mb-6 italic leading-relaxed">"${review.text}"</p>
+                                </div>
+                                <div class="border-t border-white/10 pt-4 mt-auto">
+                                    <p class="text-sm font-bold text-white uppercase no-accents tracking-wider">${review.name}</p>
+                                    <p class="text-xs text-cosmic-lavender mt-1">${review.date} • ${review.count} αξιολόγηση/εις</p>
+                                </div>
+                            </div>
+                        `;
+
+                        // Print twice for infinite scrolling
+                        let htmlStr = reviews.map(createReviewCard).join('');
+                        document.write(htmlStr + htmlStr);
+                    </script>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 relative z-20 reveal">
+                <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-white/10 hover:border-cosmic-lavender rounded-full text-sm font-bold text-white hover:bg-white/10 transition-all">
+                    Διαβάστε περισσότερα στο <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" class="h-4 ml-1 invert" alt="DA">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-cosmic-void border-t border-white/10 pt-24 pb-10 relative overflow-hidden">
+        <div class="absolute bottom-0 left-0 w-[40rem] h-[40rem] bg-cosmic-purple/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                
+                <div class="lg:col-span-2 reveal">
+                    <h3 class="text-3xl font-serif text-white mb-6">Ας κάνουμε το πρώτο βήμα.</h3>
+                    <p class="text-gray-400 max-w-sm mb-8 leading-relaxed">
+                        Επικοινωνήστε μαζί μας για να ορίσουμε την πρώτη σας συνεδρία σε ένα περιβάλλον απόλυτης αποδοχής και ασφάλειας.
+                    </p>
+                    <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1&acdpid=78642&autobook-dpid=78642" target="_blank" class="inline-flex items-center justify-center bg-white text-cosmic-void px-8 py-4 rounded-full font-bold hover:bg-cosmic-lavender hover:text-cosmic-void transition-colors shadow-glow-purple group">
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" class="h-4 mr-3 grayscale group-hover:grayscale-0 transition-all">
+                        Κλείστε Ραντεβού
+                    </a>
+                </div>
+
+                <div class="reveal reveal-delay-1">
+                    <h4 class="text-sm font-bold text-cosmic-lavender mb-6 uppercase tracking-widest no-accents">ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ</h4>
+                    <ul class="space-y-6 text-gray-300">
+                        <li class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <span class="mt-2">Ελλανίκου 32-36,<br>Παγκράτι, Αττική</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                                <i data-lucide="phone" class="w-4 h-4 text-white"></i>
+                            </div>
+                            <a href="tel:+306948659344" class="hover:text-cosmic-lavender transition-colors font-medium tracking-wider">694 865 9344</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="reveal reveal-delay-2">
+                    <h4 class="text-sm font-bold text-cosmic-lavender mb-6 uppercase tracking-widest no-accents">ΩΡΑΡΙΟ ΛΕΙΤΟΥΡΓΙΑΣ</h4>
+                    <div class="glass-dark p-6 rounded-2xl border border-white/5">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i data-lucide="clock" class="w-5 h-5 text-cosmic-rose shrink-0"></i>
+                            <span class="text-white font-medium tracking-wider text-sm no-accents">ΔΕΥΤΕΡΑ - ΣΑΒΒΑΤΟ</span>
+                        </div>
+                        <p class="text-sm text-gray-400 font-medium pl-8 italic">Κατόπιν Ραντεβού</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 reveal">
+                <p class="text-gray-500 text-sm">© 2026 Θανάσης Γιαννουλής. Όλα τα δικαιώματα διατηρούνται.</p>
+                <p class="text-gray-500 text-sm">
+                    Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener" class="text-white font-bold hover:text-cosmic-lavender transition-colors">Advon Media</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Initialize Lucide Icons (called twice since we injected some via innerHTML mapping)
+        lucide.createIcons();
+        setTimeout(() => lucide.createIcons(), 100);
+
+        // 2. Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        const navbar = document.getElementById('navbar');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            // Toggle icon from menu to x
+            const iconEl = mobileBtn.querySelector('i');
+            if(mobileMenu.classList.contains('hidden')) {
+                iconEl.setAttribute('data-lucide', 'menu');
+            } else {
+                iconEl.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                mobileBtn.querySelector('i').setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // 3. Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2', 'bg-cosmic-navy/80', 'backdrop-blur-md');
+                navbar.classList.remove('py-6');
+                navbar.querySelector('.glass-dark').classList.remove('glass-dark', 'shadow-glass');
+                navbar.querySelector('.glass-dark')?.classList.add('bg-transparent', 'border-transparent');
+            } else {
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-2', 'bg-cosmic-navy/80', 'backdrop-blur-md');
+                // Revert inner nav styling
+                const innerNav = navbar.children[0].children[0];
+                innerNav.classList.add('glass-dark', 'shadow-glass');
+            }
+        });
+
+        // 4. Scroll Reveal Animations (Intersection Observer)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // 5. Lightbox Functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(imageSrc) {
+            lightboxImg.src = imageSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            setTimeout(() => {
+                lightboxImg.src = '';
+                document.body.style.overflow = '';
+            }, 500);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
