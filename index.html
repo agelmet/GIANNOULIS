@@ -202,9 +202,13 @@
 
     <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 overflow-hidden bg-brand-light">
         
-        <div class="hidden lg:block absolute inset-0 z-0">
-            <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-9.jpg?raw=true" class="w-full h-full object-cover object-[10%_30%] scale-105" alt="Background">
-            <div class="absolute inset-0 bg-gradient-to-r from-brand-light/10 via-brand-light/70 to-brand-light"></div>
+        <div class="hidden lg:block absolute inset-0 z-0 bg-brand-light overflow-hidden">
+            <div class="absolute bottom-[-2%] left-[-5%] w-[65%] h-[92%]">
+                <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-9.jpg?raw=true" class="w-full h-full object-cover object-top" alt="Θανάσης Γιαννουλής">
+                <div class="absolute inset-y-0 right-0 w-[40%] bg-gradient-to-l from-brand-light via-brand-light/80 to-transparent"></div>
+                <div class="absolute inset-x-0 top-0 h-[25%] bg-gradient-to-b from-brand-light via-brand-light/80 to-transparent"></div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-brand-light/40 to-brand-light z-10 pointer-events-none"></div>
         </div>
 
         <div class="max-w-7xl mx-auto w-full flex justify-center lg:justify-end relative z-10">
@@ -255,9 +259,9 @@
     </section>
 
     <section id="about" class="py-32 px-6 bg-white relative">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-start">
             
-            <div class="lg:col-span-5 relative reveal-left">
+            <div class="hidden lg:block lg:col-span-5 relative reveal-left">
                 <div class="portrait-container shadow-card border border-brand-light bg-white p-2">
                     <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-8.jpg?raw=true" alt="Πορτρέτο Θανάση Γιαννουλή" class="w-full h-auto object-cover rounded-[16px] portrait-img">
                 </div>
@@ -271,6 +275,13 @@
                     <p>
                         Ο <strong>Θανάσης Γιαννουλής</strong> είναι Σύμβουλος Ψυχικής Υγείας και Συστημικός Θεραπευτής, διατηρώντας το ιδιωτικό του γραφείο στο Παγκράτι (ψ. Συστημική Θεραπεία). Η επιστημονική του διαδρομή ξεχωρίζει καθώς συνδυάζει οργανικά την Ψυχολογία με την Ειδική Αγωγή.
                     </p>
+
+                    <div class="block lg:hidden relative reveal my-8">
+                        <div class="portrait-container shadow-card border border-brand-light bg-white p-2">
+                            <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-8.jpg?raw=true" alt="Πορτρέτο Θανάση Γιαννουλή" class="w-full h-auto object-cover rounded-[16px] portrait-img">
+                        </div>
+                    </div>
+
                     <p>
                         Ξεκινώντας από το Παιδαγωγικό Τμήμα Ειδικής Αγωγής (2009) και ολοκληρώνοντας το Μεταπτυχιακό του στη «Συμβουλευτική στην Ειδική Αγωγή, την Εκπαίδευση και την Υγεία» στο Πανεπιστήμιο Θεσσαλίας (2014), απέκτησε βαθιά κατανόηση των αναπτυξιακών και μαθησιακών προκλήσεων. Έχει εργαστεί ως σχολικός ψυχολόγος σε δομές Ειδικής Αγωγής (Ε.Ε.Ε.Ε.Κ) με εφήβους και ενήλικες με αναπηρία, καθώς και στα Εξωτερικά Ιατρεία του Αχιλλοπούλειου Νοσοκομείου Βόλου.
                     </p>
@@ -292,7 +303,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 rounded-[2.5rem] bg-white/60 backdrop-blur-xl shadow-glass border border-brand-blue/10 service-grid-container reveal">
                 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden rounded-tl-[2.5rem] md:rounded-tr-none rounded-tr-[2.5rem]">
                     <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">01</span>
                     <div class="relative z-10">
                         <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Ατομική Ψυχοθεραπεία <br>& Διαχείριση Κρίσεων</h3>
@@ -307,7 +318,7 @@
                     </div>
                 </div>
 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden md:rounded-tr-[2.5rem]">
                     <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">02</span>
                     <div class="relative z-10">
                         <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Θεραπεία Ζεύγους, <br>Γάμου & Οικογένειας</h3>
@@ -321,7 +332,7 @@
                     </div>
                 </div>
 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden md:rounded-bl-[2.5rem]">
                     <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">03</span>
                     <div class="relative z-10">
                         <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Παιδιά, Έφηβοι <br>& Ειδική Αγωγή</h3>
@@ -336,7 +347,7 @@
                     </div>
                 </div>
 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden rounded-bl-[2.5rem] rounded-br-[2.5rem] md:rounded-bl-none">
                     <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">04</span>
                     <div class="relative z-10">
                         <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Διαδικτυακή Θεραπεία <br>& Προσβασιμότητα</h3>
