@@ -130,6 +130,34 @@
         .portrait-container:hover .portrait-img {
             transform: scale(1.05);
         }
+
+        /* Services Grid Lines */
+        .service-grid-container {
+            position: relative;
+        }
+        .service-grid-container::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(43, 108, 176, 0.1);
+            display: none;
+        }
+        .service-grid-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            background: rgba(43, 108, 176, 0.1);
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .service-grid-container::before, .service-grid-container::after { display: block; }
+        }
     </style>
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -149,7 +177,7 @@
                 <div class="hidden lg:flex items-center space-x-10">
                     <a href="#about" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">Η ΠΡΟΣΕΓΓΙΣΗ</a>
                     <a href="#services" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΥΠΗΡΕΣΙΕΣ</a>
-                    <a href="#pillars" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΠΥΛΩΝΕΣ</a>
+                    <a href="#foundations" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΘΕΜΕΛΙΑ</a>
                     <a href="#space" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">Ο ΧΩΡΟΣ</a>
                     <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1&acdpid=78642&autobook-dpid=78642" target="_blank" rel="noopener" class="px-7 py-3 bg-brand-darkblue text-white rounded-full text-sm font-bold hover:bg-brand-blue hover:shadow-glow-blue transition-all transform hover:-translate-y-1 flex items-center gap-2 no-accents">
                         ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
@@ -166,19 +194,23 @@
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-2xl shadow-card hidden flex-col items-center py-10 space-y-8 border-t border-brand-light">
             <a href="#about" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">Η ΠΡΟΣΕΓΓΙΣΗ</a>
             <a href="#services" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
-            <a href="#pillars" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΠΥΛΩΝΕΣ</a>
+            <a href="#foundations" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΘΕΜΕΛΙΑ</a>
             <a href="#space" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">Ο ΧΩΡΟΣ</a>
             <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1" target="_blank" class="px-8 py-4 bg-brand-blue text-white rounded-full text-lg font-bold tracking-wider no-accents mobile-link">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 overflow-hidden bg-brand-light lg:bg-[url('https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-9.jpg?raw=true')] lg:bg-cover lg:bg-center lg:bg-no-repeat lg:bg-fixed">
+    <section class="relative min-h-screen flex items-center pt-32 pb-20 px-6 overflow-hidden bg-brand-light">
         
-        <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-transparent via-brand-light/80 to-brand-light/95 z-0"></div>
+        <div class="hidden lg:block absolute inset-0 z-0">
+            <img src="https://github.com/agelmet/GIANNOULIS/blob/main/unnamed-9.jpg?raw=true" class="w-full h-full object-cover object-[10%_30%] scale-105" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-light/10 via-brand-light/70 to-brand-light"></div>
+        </div>
 
         <div class="max-w-7xl mx-auto w-full flex justify-center lg:justify-end relative z-10">
             
-            <div class="w-full lg:w-5/12 reveal-right text-center lg:text-left">
+            <div class="w-full lg:w-5/12 text-center lg:text-left reveal-right">
+                
                 <div class="hidden lg:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-md text-brand-blue text-sm font-medium mb-8 border border-brand-blue/20 shadow-sm">
                     <span class="w-2 h-2 rounded-full bg-brand-lightblue animate-pulse"></span>
                     ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ | ΠΑΓΚΡΑΤΙ
@@ -250,78 +282,70 @@
         </div>
     </section>
 
-    <section id="services" class="py-32 px-6 bg-brand-light relative overflow-hidden">
+    <section id="services" class="py-32 px-6 bg-brand-light relative">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-20 reveal">
+            <div class="text-center mb-16 reveal">
                 <span class="text-brand-blue font-bold tracking-widest text-sm uppercase no-accents">ΕΞΕΙΔΙΚΕΥΣΕΙΣ</span>
                 <h2 class="text-4xl md:text-5xl font-serif text-brand-darkblue mt-4 mb-6">Υπηρεσίες Θεραπείας</h2>
                 <div class="w-16 h-1 bg-brand-blue mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 rounded-[2.5rem] bg-white/60 backdrop-blur-xl shadow-glass border border-brand-blue/10 service-grid-container reveal">
                 
-                <div class="bg-white p-10 rounded-3xl group relative overflow-hidden reveal border border-gray-100 shadow-card hover:border-brand-lightblue transition-all duration-500 hover:-translate-y-1">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">01</span>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
-                            <i data-lucide="user" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Ατομική Ψυχοθεραπεία & Διαχείριση Κρίσεων</h3>
-                        <p class="text-brand-text mb-6 text-base leading-relaxed">
+                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Ατομική Ψυχοθεραπεία <br>& Διαχείριση Κρίσεων</h3>
+                        <p class="text-brand-text mb-8 text-base leading-relaxed">
                             Η ατομική θεραπεία αποτελεί έναν χώρο προσωπικής ανασύνταξης. Προσεγγίζουμε τις κρίσεις πανικού, τις ειδικές φοβίες και το χρόνιο στρες όχι ως "ελαττώματα", αλλά ως μηνύματα που ζητούν αποκωδικοποίηση. Παράλληλα, παρέχεται εξειδικευμένη υποστήριξη για την ομαλή διαχείριση της απώλειας και του πένθους.
                         </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Ατομικές (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Άγχος / Πανικός</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Πένθος</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ατομικές (60')</span>
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Άγχος / Πανικός</span>
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Πένθος</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl group relative overflow-hidden reveal reveal-delay-1 border border-gray-100 shadow-card hover:border-brand-lightblue transition-all duration-500 hover:-translate-y-1">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">02</span>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
-                            <i data-lucide="heart-handshake" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Θεραπεία Ζεύγους, Γάμου & Οικογένειας</h3>
-                        <p class="text-brand-text mb-6 text-base leading-relaxed">
+                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Θεραπεία Ζεύγους, <br>Γάμου & Οικογένειας</h3>
+                        <p class="text-brand-text mb-8 text-base leading-relaxed">
                             Στη Συστημική θεραπεία, η εστίαση βρίσκεται στη σχέση και την αλληλεπίδραση. Δουλεύουμε συνεργατικά για να εντοπίσουμε τα δυσλειτουργικά μοτίβα επικοινωνίας που οδηγούν σε συγκρούσεις. Μέσα από τη συμβουλευτική γονέων, ενδυναμώνουμε τον γονεϊκό ρόλο και βελτιώνουμε το κλίμα στο σπίτι.
                         </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Ζεύγος (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Γονείς - Παιδιά</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ζεύγος (60')</span>
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Γονείς - Παιδιά</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl group relative overflow-hidden reveal border border-gray-100 shadow-card hover:border-brand-lightblue transition-all duration-500 hover:-translate-y-1">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">03</span>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
-                            <i data-lucide="puzzle" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Παιδιά, Έφηβοι & Ειδική Αγωγή</h3>
-                        <p class="text-brand-text mb-6 text-base leading-relaxed">
+                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Παιδιά, Έφηβοι <br>& Ειδική Αγωγή</h3>
+                        <p class="text-brand-text mb-8 text-base leading-relaxed">
                             Αξιοποιώντας ισχυρό υπόβαθρο στην Ειδική Αγωγή, αναλαμβάνουμε περιστατικά παιδιών (έως 12 ετών) και εφήβων. Είτε πρόκειται για σχολικό άγχος είτε για μαθησιακές/αναπτυξιακές προκλήσεις, η προσέγγιση προσαρμόζεται στην ηλικία του παιδιού, εμπλέκοντας το οικογενειακό σύστημα.
                         </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Παιδιά (έως 12)</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Έφηβοι (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Ειδική Αγωγή</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Παιδιά (έως 12)</span>
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Έφηβοι (60')</span>
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ειδική Αγωγή</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white p-10 rounded-3xl group relative overflow-hidden reveal reveal-delay-1 border border-gray-100 shadow-card hover:border-brand-lightblue transition-all duration-500 hover:-translate-y-1">
+                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden">
+                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">04</span>
                     <div class="relative z-10">
-                        <div class="w-14 h-14 bg-brand-light rounded-2xl flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
-                            <i data-lucide="monitor-smartphone" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Διαδικτυακή Θεραπεία & Προσβασιμότητα</h3>
-                        <p class="text-brand-text mb-6 text-base leading-relaxed">
+                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Διαδικτυακή Θεραπεία <br>& Προσβασιμότητα</h3>
+                        <p class="text-brand-text mb-8 text-base leading-relaxed">
                             Οι υπηρεσίες προσφέρονται και διαδικτυακά (Online) για άτομα εκτός Αθηνών ή όσους προτιμούν τον χώρο τους. Αναγνωρίζοντας τις κοινωνικές ανάγκες, παρέχεται ειδική τιμολογιακή πολιτική (συνεδρίες 45') για φοιτητές και ανέργους.
                         </p>
-                        <div class="flex flex-wrap gap-2 mt-auto">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Online (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue text-xs rounded-full font-medium">Ειδικό κόστος (45')</span>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Online (60')</span>
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ειδικό κόστος (45')</span>
                         </div>
                     </div>
                 </div>
@@ -330,48 +354,64 @@
         </div>
     </section>
 
-    <section id="pillars" class="py-32 px-6 bg-brand-darkblue relative text-white">
+    <section id="foundations" class="py-32 px-6 bg-brand-darkblue relative text-white">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row justify-between items-end mb-20 reveal">
-                <div class="max-w-2xl">
-                    <span class="text-brand-lightblue font-bold tracking-widest text-sm uppercase no-accents">Η ΘΕΡΑΠΕΥΤΙΚΗ ΜΟΥ ΤΑΥΤΟΤΗΤΑ</span>
-                    <h2 class="text-4xl md:text-5xl font-serif mt-4 mb-6">Οι 4 Πυλώνες της Πρακτικής μου</h2>
-                    <p class="text-blue-100 text-lg">Θεμέλια αξιοπιστίας, επιστημονικής εγκυρότητας και βαθιάς ενσυναίσθησης.</p>
-                </div>
+            <div class="mb-16 reveal text-center lg:text-left">
+                <span class="text-brand-lightblue font-bold tracking-widest text-sm uppercase no-accents">Η ΘΕΡΑΠΕΥΤΙΚΗ ΜΟΥ ΤΑΥΤΟΤΗΤΑ</span>
+                <h2 class="text-4xl md:text-5xl font-serif mt-4 mb-6">Τα Θεμέλια της Προσέγγισής μου</h2>
+                <p class="text-blue-100 text-lg max-w-2xl mx-auto lg:mx-0">Συστημική Οπτική, Επιστημονική Εγκυρότητα & Βαθιά Ενσυναίσθηση.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal">
-                    <div class="text-5xl mb-6">🏛️</div>
-                    <h4 class="text-xl font-bold mb-4 font-serif">Εκπαίδευση στο ΑΚΜΑ</h4>
-                    <p class="text-blue-100/80 text-sm leading-relaxed">
-                        Η εκπαίδευσή μου και ο ρόλος μου ως συντονιστής στο Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (το ιστορικότερο κέντρο Συστημικής σκέψης στην Ελλάδα) εγγυάται το βάθος της προσέγγισης.
-                    </p>
+                <div class="bg-white/5 p-10 md:p-12 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal md:col-span-2 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
+                        <i data-lucide="building-2" class="w-64 h-64 text-white"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
+                            <i data-lucide="book-open" class="w-6 h-6 text-brand-lightblue"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-serif">Εκπαίδευση στο ΑΚΜΑ</h4>
+                        <p class="text-blue-100/80 text-base leading-relaxed max-w-xl">
+                            Η εκπαίδευσή μου και ο ρόλος μου ως συντονιστής στο Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (το ιστορικότερο κέντρο Συστημικής σκέψης στην Ελλάδα) εγγυάται το βάθος και την ποιότητα της προσέγγισης.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-1 lg:translate-y-8">
-                    <div class="text-5xl mb-6">🧩</div>
+                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-1 flex flex-col justify-center">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
+                        <i data-lucide="puzzle" class="w-6 h-6 text-brand-lightblue"></i>
+                    </div>
                     <h4 class="text-xl font-bold mb-4 font-serif">Ειδική Αγωγή</h4>
                     <p class="text-blue-100/80 text-sm leading-relaxed">
-                        Η πορεία μου ως σχολικός ψυχολόγος προσφέρει σπάνια, πρακτική ενσυναίσθηση για τις δυσκολίες παιδιών, εφήβων και γονέων στο σχολικό και κοινωνικό πλαίσιο.
+                        Η πορεία μου ως σχολικός ψυχολόγος προσφέρει σπάνια, πρακτική ενσυναίσθηση για τις δυσκολίες παιδιών και γονέων.
                     </p>
                 </div>
 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-2">
-                    <div class="text-5xl mb-6">🏥</div>
+                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-2 flex flex-col justify-center">
+                    <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
+                        <i data-lucide="stethoscope" class="w-6 h-6 text-brand-lightblue"></i>
+                    </div>
                     <h4 class="text-xl font-bold mb-4 font-serif">Κλινική Εμπειρία</h4>
                     <p class="text-blue-100/80 text-sm leading-relaxed">
-                        Η θητεία μου στο Αχιλλοπούλειο Νοσοκομείο και σε δομές Ε.Ε.Ε.Ε.Κ έχει θωρακίσει την ικανότητά μου να διαχειρίζομαι με ψυχραιμία σύνθετες ψυχικές και αναπτυξιακές κρίσεις.
+                        Η θητεία μου σε Νοσοκομεία και δομές Ε.Ε.Ε.Ε.Κ έχει θωρακίσει την ικανότητά μου να διαχειρίζομαι σύνθετες κρίσεις.
                     </p>
                 </div>
 
-                <div class="bg-white/5 p-8 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-3 lg:translate-y-8">
-                    <div class="text-5xl mb-6">🔄</div>
-                    <h4 class="text-xl font-bold mb-4 font-serif">Συστημική Οπτική</h4>
-                    <p class="text-blue-100/80 text-sm leading-relaxed">
-                        Δεν βλέπω τον άνθρωπο ως μια "απομονωμένη μονάδα". Η λύση βρίσκεται πάντα στη βελτίωση των σχέσεών μας με τους κύκλους μας (οικογένεια, εργασία, κοινωνία).
-                    </p>
+                <div class="bg-white/5 p-10 md:p-12 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-3 md:col-span-2 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
+                        <i data-lucide="network" class="w-64 h-64 text-white"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
+                            <i data-lucide="infinity" class="w-6 h-6 text-brand-lightblue"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold mb-4 font-serif">Συστημική Οπτική</h4>
+                        <p class="text-blue-100/80 text-base leading-relaxed max-w-xl">
+                            Δεν βλέπω τον άνθρωπο ως μια "απομονωμένη μονάδα". Η λύση βρίσκεται πάντα στη βελτίωση των σχέσεών μας με τους κύκλους μας (οικογένεια, εργασία, κοινωνία).
+                        </p>
+                    </div>
                 </div>
 
             </div>
