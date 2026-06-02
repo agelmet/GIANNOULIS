@@ -135,29 +135,6 @@
         .service-grid-container {
             position: relative;
         }
-        .service-grid-container::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background: rgba(43, 108, 176, 0.1);
-            display: none;
-        }
-        .service-grid-container::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 1px;
-            height: 100%;
-            background: rgba(43, 108, 176, 0.1);
-            display: none;
-        }
-        @media (min-width: 768px) {
-            .service-grid-container::before, .service-grid-container::after { display: block; }
-        }
     </style>
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -174,10 +151,11 @@
                     </div>
                 </a>
                 
-                <div class="hidden lg:flex items-center space-x-10">
-                    <a href="#about" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">Η ΠΡΟΣΕΓΓΙΣΗ</a>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΒΙΟΓΡΑΦΙΚΟ</a>
                     <a href="#services" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΥΠΗΡΕΣΙΕΣ</a>
                     <a href="#foundations" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΘΕΜΕΛΙΑ</a>
+                    <a href="#media" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">ΔΡΑΣΕΙΣ</a>
                     <a href="#space" class="text-sm font-medium text-brand-text hover:text-brand-blue transition-colors tracking-wide no-accents">Ο ΧΩΡΟΣ</a>
                     <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1&acdpid=78642&autobook-dpid=78642" target="_blank" rel="noopener" class="px-7 py-3 bg-brand-darkblue text-white rounded-full text-sm font-bold hover:bg-brand-blue hover:shadow-glow-blue transition-all transform hover:-translate-y-1 flex items-center gap-2 no-accents">
                         ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ
@@ -192,9 +170,10 @@
         </div>
         
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-2xl shadow-card hidden flex-col items-center py-10 space-y-8 border-t border-brand-light">
-            <a href="#about" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">Η ΠΡΟΣΕΓΓΙΣΗ</a>
+            <a href="#about" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΒΙΟΓΡΑΦΙΚΟ</a>
             <a href="#services" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΥΠΗΡΕΣΙΕΣ</a>
             <a href="#foundations" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΘΕΜΕΛΙΑ</a>
+            <a href="#media" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">ΔΡΑΣΕΙΣ</a>
             <a href="#space" class="text-lg font-medium text-brand-darkblue tracking-wider no-accents mobile-link">Ο ΧΩΡΟΣ</a>
             <a href="https://www.doctoranytime.gr/d/Symvoulos-psychikis-ygeias/giannoulis-thanasis?autobook=1" target="_blank" class="px-8 py-4 bg-brand-blue text-white rounded-full text-lg font-bold tracking-wider no-accents mobile-link">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
         </div>
@@ -213,15 +192,15 @@
 
         <div class="max-w-7xl mx-auto w-full flex justify-center lg:justify-end relative z-10">
             
-            <div class="w-full lg:w-5/12 text-center lg:text-left reveal-right">
+            <div class="w-full lg:w-7/12 xl:w-6/12 text-center lg:text-left reveal-right">
                 
-                <div class="hidden lg:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-md text-brand-blue text-sm font-medium mb-8 border border-brand-blue/20 shadow-sm">
+                <div class="hidden lg:inline-flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/80 backdrop-blur-md text-brand-blue text-sm font-medium mb-8 border border-brand-blue/20 shadow-sm uppercase no-accents tracking-widest">
                     <span class="w-2 h-2 rounded-full bg-brand-lightblue animate-pulse"></span>
-                    ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ | ΠΑΓΚΡΑΤΙ
+                    ΨΥΧΟΘΕΡΑΠΕΥΤΗΣ – ΣΥΜΒΟΥΛΟΣ ΨΥΧΙΚΗΣ ΥΓΕΙΑΣ | ΠΑΓΚΡΑΤΙ
                 </div>
                 
-                <h1 class="text-5xl lg:text-6xl xl:text-7xl font-serif text-brand-darkblue leading-[1.1] mb-6 tracking-wide drop-shadow-sm">
-                    Χτίζοντας Γέφυρες στις <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-lightblue italic">Σχέσεις μας.</span>
+                <h1 class="text-4xl lg:text-5xl xl:text-6xl font-serif text-brand-darkblue leading-[1.2] mb-6 tracking-wide drop-shadow-sm">
+                    «Είμαι άνθρωπος και τίποτα μη ανθρώπινο δεν μου είναι ξένο.»
                 </h1>
                 
                 <div class="block lg:hidden w-full max-w-[400px] mx-auto my-8">
@@ -229,15 +208,19 @@
                 </div>
                 
                 <p class="text-xl font-serif italic text-brand-text mb-8">
-                    Συστημική Θεραπεία & Ενσυναίσθηση
+                    Συστημική Θεραπεία
                 </p>
 
-                <div class="flex items-center justify-center lg:justify-start gap-4 mb-10 text-sm text-brand-muted font-bold tracking-widest no-accents">
-                    <span>ΑΤΟΜΙΚΗ ΘΕΡΑΠΕΙΑ</span>
-                    <div class="w-px h-4 bg-gray-300"></div>
-                    <span>ΖΕΥΓΑΡΙΑ</span>
-                    <div class="w-px h-4 bg-gray-300"></div>
-                    <span>ΟΙΚΟΓΕΝΕΙΑ</span>
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2 mb-10 text-[11px] md:text-xs font-bold tracking-[0.15em] no-accents text-brand-muted">
+                    <span class="whitespace-nowrap">ΑΤΟΜΙΚΗ ΘΕΡΑΠΕΙΑ</span>
+                    <div class="hidden sm:block w-px h-3 bg-gray-300"></div>
+                    <span class="whitespace-nowrap">ΘΕΡΑΠΕΙΑ ΖΕΥΓΟΥΣ</span>
+                    <div class="hidden sm:block w-px h-3 bg-gray-300"></div>
+                    <span class="whitespace-nowrap">ΟΜΑΔΙΚΗ ΘΕΡΑΠΕΙΑ</span>
+                    <div class="hidden lg:block w-px h-3 bg-gray-300"></div>
+                    <span class="whitespace-nowrap">ΟΙΚΟΓΕΝΕΙΑΚΗ ΘΕΡΑΠΕΙΑ</span>
+                    <div class="hidden sm:block w-px h-3 bg-gray-300"></div>
+                    <span class="whitespace-nowrap">ΘΕΡΑΠΕΙΑ ΠΑΙΔΙΩΝ ΚΑΙ ΕΦΗΒΩΝ</span>
                 </div>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5">
@@ -268,12 +251,12 @@
             </div>
 
             <div class="lg:col-span-7 reveal-right">
-                <span class="text-brand-blue font-bold tracking-widest text-sm uppercase no-accents">Η ΦΙΛΟΣΟΦΙΑ ΜΟΥ</span>
+                <span class="text-brand-blue font-bold tracking-widest text-sm uppercase no-accents">ΒΙΟΓΡΑΦΙΚΟ</span>
                 <h2 class="text-3xl lg:text-4xl font-serif text-brand-darkblue mt-4 mb-8 leading-tight">Ο άνθρωπος δεν είναι ποτέ αποκομμένος από το περιβάλλον του.</h2>
                 
                 <div class="space-y-6 text-lg text-brand-text font-light leading-relaxed">
                     <p>
-                        Ο <strong>Θανάσης Γιαννουλής</strong> είναι Σύμβουλος Ψυχικής Υγείας και Συστημικός Θεραπευτής, διατηρώντας το ιδιωτικό του γραφείο στο Παγκράτι (ψ. Συστημική Θεραπεία). Η επιστημονική του διαδρομή ξεχωρίζει καθώς συνδυάζει οργανικά την Ψυχολογία με την Ειδική Αγωγή.
+                        «Ο Θανάσης Γιαννουλής είναι Συστημικός Θεραπευτής (ECP), Σύμβουλος Ψυχικής Υγείας (MSc), τελειόφοιτος Ψυχολογίας (BA) και Ειδικός Παιδαγωγός (BA), διατηρώντας το ιδιωτικό του γραφείο Συστημικής Θεραπείας στο Παγκράτι, πλησίον Πλατείας Προσκόπων.»
                     </p>
 
                     <div class="block lg:hidden relative reveal my-8">
@@ -283,10 +266,19 @@
                     </div>
 
                     <p>
-                        Ξεκινώντας από το Παιδαγωγικό Τμήμα Ειδικής Αγωγής (2009) και ολοκληρώνοντας το Μεταπτυχιακό του στη «Συμβουλευτική στην Ειδική Αγωγή, την Εκπαίδευση και την Υγεία» στο Πανεπιστήμιο Θεσσαλίας (2014), απέκτησε βαθιά κατανόηση των αναπτυξιακών και μαθησιακών προκλήσεων. Έχει εργαστεί ως σχολικός ψυχολόγος σε δομές Ειδικής Αγωγής (Ε.Ε.Ε.Ε.Κ) με εφήβους και ενήλικες με αναπηρία, καθώς και στα Εξωτερικά Ιατρεία του Αχιλλοπούλειου Νοσοκομείου Βόλου.
+                        «Ξεκινώντας από το Παιδαγωγικό Τμήμα Ειδικής Αγωγής (2009), συνέχισε τις σπουδές του στην Ψυχολογία, ολοκληρώνοντας το Μεταπτυχιακό του στη «Συμβουλευτική στην Ειδική Αγωγή, την Εκπαίδευση και την Υγεία», στο Πανεπιστήμιο Θεσσαλίας (2014).»
                     </p>
                     <p>
-                        Η κλινική του ταυτότητα εδραιώθηκε μέσα από την πολυετή εκπαίδευσή του (2018-2021) στη Συστημική Ψυχοθεραπεία στο ιστορικό <strong>Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (ΑΚΜΑ)</strong>. Σήμερα, εμβαθύνει περαιτέρω στη Θεραπεία Οικογένειας και Ομάδας, ενώ αποτελεί και συντονιστής εκπαιδευτικών ομάδων στο ΑΚΜΑ.
+                        «Από το 2018 παρακολουθεί σεμινάρια πιστοποίησης Θεραπευτή Ομάδας και Οικογένειας -διάρκειας 8 ετών- τα οποία και ολοκλήρωσε το 2025, στο ιστορικό Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (ΑΚΜΑ), ενώ αναμένει την ευρωπαϊκή του πιστοποίηση ως συστημικός θεραπευτής - European Certificate of Psychotherapy.»
+                    </p>
+                    <p>
+                        «Το τρέχον διάστημα ολοκληρώνει τις σπουδές στην Κλινική Ψυχολογία -Bachelor- στο Κολέγιο Ανθρωπιστικών Επιστημών ICPS, σε συνεργασία με το Βρετανικό Πανεπιστήμιο του Central Lancashire.»
+                    </p>
+                    <p>
+                        «Έχει εργαστεί ως σχολικός ψυχολόγος σε δομές Ειδικής Αγωγής (Ε.Ε.Ε.Ε.Κ) με εφήβους και ενήλικες με αναπηρία, καθώς και στα Εξωτερικά Ιατρεία του Αχιλλοπούλειου Νοσοκομείου Βόλου, στα πλαίσια της πρακτικής του άσκησης.»
+                    </p>
+                    <p>
+                        «Ιδιωτεύει από το 2018, έχει εμπειρία σε ατομικές συνεδρίες ενηλίκων, συνεδρίες θεραπείας ζεύγους, οικογένειας, εφήβων και παιδιών, ενώ στο χώρο του διατηρεί θεραπευτικές ομάδες ενηλίκων.»
                     </p>
                 </div>
             </div>
@@ -301,64 +293,125 @@
                 <div class="w-16 h-1 bg-brand-blue mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 rounded-[2.5rem] bg-white/60 backdrop-blur-xl shadow-glass border border-brand-blue/10 service-grid-container reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden rounded-tl-[2.5rem] md:rounded-tr-none rounded-tr-[2.5rem]">
-                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">01</span>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Ατομική Ψυχοθεραπεία <br>& Διαχείριση Κρίσεων</h3>
-                        <p class="text-brand-text mb-8 text-base leading-relaxed">
-                            Η ατομική θεραπεία αποτελεί έναν χώρο προσωπικής ανασύνταξης. Προσεγγίζουμε τις κρίσεις πανικού, τις ειδικές φοβίες και το χρόνιο στρες όχι ως "ελαττώματα", αλλά ως μηνύματα που ζητούν αποκωδικοποίηση. Παράλληλα, παρέχεται εξειδικευμένη υποστήριξη για την ομαλή διαχείριση της απώλειας και του πένθους.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ατομικές (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Άγχος / Πανικός</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Πένθος</span>
+                <div class="bg-white p-10 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 reveal flex flex-col justify-between">
+                    <div class="relative z-10 mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
+                            <i data-lucide="user" class="w-6 h-6"></i>
                         </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-darkblue mb-4 leading-snug">Ατομική Θεραπεία <br>Ενηλίκων</h3>
+                        <div class="text-brand-text text-sm leading-relaxed space-y-3">
+                            <p>«Με την ατομική θεραπεία προσεγγίζουμε ζητήματα προσωπικής ανάπτυξης, διαχείρισης προσωπικών κρίσεων, πένθους, προσωπικών αγωνιών, άγχους, κρίσεων πανικού, στρες, δυσκολιών στην επικοινωνία και στην έκφραση συναισθημάτων.»</p>
+                            <p>«Δημιουργώντας συνθήκες εμπιστοσύνης και ασφάλειας, σε ένα περιβάλλον κατανόησης, κοντά στον άνθρωπο και στις δικές του μοναδικές ανάγκες, προσπαθούμε να ξετυλίξουμε το προσωπικό «κουβάρι» της ζωής του καθενός, με γνήσιο ενδιαφέρον και εχεμύθεια.»</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Διάρκεια: 50 λεπτά</span>
                     </div>
                 </div>
 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden md:rounded-tr-[2.5rem]">
-                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">02</span>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Θεραπεία Ζεύγους, <br>Γάμου & Οικογένειας</h3>
-                        <p class="text-brand-text mb-8 text-base leading-relaxed">
-                            Στη Συστημική θεραπεία, η εστίαση βρίσκεται στη σχέση και την αλληλεπίδραση. Δουλεύουμε συνεργατικά για να εντοπίσουμε τα δυσλειτουργικά μοτίβα επικοινωνίας που οδηγούν σε συγκρούσεις. Μέσα από τη συμβουλευτική γονέων, ενδυναμώνουμε τον γονεϊκό ρόλο και βελτιώνουμε το κλίμα στο σπίτι.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ζεύγος (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Γονείς - Παιδιά</span>
+                <div class="bg-white p-10 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 reveal reveal-delay-1 flex flex-col justify-between">
+                    <div class="relative z-10 mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
+                            <i data-lucide="users" class="w-6 h-6"></i>
                         </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-darkblue mb-4 leading-snug">Θεραπεία Ζεύγους – <br>Συμβουλευτική Γονέων</h3>
+                        <div class="text-brand-text text-sm leading-relaxed space-y-3">
+                            <p>«Αφουγκραζόμενοι τις ανάγκες και τις δυσκολίες της ζευγαρικής σχέσης, σε μία απαιτητική εποχή για τον άνθρωπο και το σχετίζεσθαι, γίνεται μια προσπάθεια οι σύντροφοι να ξανασυστηθούν μεταξύ τους, να παρατηρήσουν κρυφές πτυχές της σχέσης τους, να αλλάξουν «τα βήματα του χορού» τους, φτιάχνοντας μια πιο λειτουργική σχέση, με επικοινωνία, κατανόηση και σεβασμό.»</p>
+                            <p>«Στο ίδιο πλαίσιο προσφέρονται συνεδρίες για την ενδυνάμωση του ζεύγους στον γονεϊκό τους ρόλο. Μαζί με τους γονείς ανακαλύπτουμε πτυχές και δυναμικές που θα τους βοηθήσουν να αντέξουν τη δυσκολία και να βρουν λειτουργικούς, νέους τρόπους σχετίζεσθαι...»</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Διάρκεια: 60΄</span>
                     </div>
                 </div>
 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden md:rounded-bl-[2.5rem]">
-                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">03</span>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Παιδιά, Έφηβοι <br>& Ειδική Αγωγή</h3>
-                        <p class="text-brand-text mb-8 text-base leading-relaxed">
-                            Αξιοποιώντας ισχυρό υπόβαθρο στην Ειδική Αγωγή, αναλαμβάνουμε περιστατικά παιδιών (έως 12 ετών) και εφήβων. Είτε πρόκειται για σχολικό άγχος είτε για μαθησιακές/αναπτυξιακές προκλήσεις, η προσέγγιση προσαρμόζεται στην ηλικία του παιδιού, εμπλέκοντας το οικογενειακό σύστημα.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Παιδιά (έως 12)</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Έφηβοι (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ειδική Αγωγή</span>
+                <div class="bg-white p-10 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 reveal reveal-delay-2 flex flex-col justify-between">
+                    <div class="relative z-10 mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
+                            <i data-lucide="home" class="w-6 h-6"></i>
                         </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-darkblue mb-4 leading-snug">Θεραπεία <br>Οικογένειας</h3>
+                        <div class="text-brand-text text-sm leading-relaxed space-y-3">
+                            <p>«Στη συστημική προσέγγιση η σφαιρική παρατήρηση των μελών δίνει μία καλύτερη εικόνα για τις συμπεριφορές, τα μοτίβα και τον τρόπο με τον οποίο τα άτομα έχουν μάθουν να λειτουργούν και να συμπεριφέρονται.»</p>
+                            <p>«Τους καλούμε να ακούσουμε όλοι μαζί τις προσωπικές τους αλήθειες, να βρούμε από που πηγάζουν οι δυσκολίες και να φτιάξουμε νέες διαδρομές ζωής και νέους τρόπους συνύπαρξης.»</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Διάρκεια: 60΄</span>
                     </div>
                 </div>
 
-                <div class="p-10 md:p-14 relative group transition-all duration-500 hover:bg-white overflow-hidden rounded-bl-[2.5rem] rounded-br-[2.5rem] md:rounded-bl-none">
-                    <span class="absolute bottom-4 right-8 text-8xl font-serif font-black text-brand-blue/[0.03] group-hover:text-brand-blue/[0.08] transition-colors pointer-events-none select-none z-0">04</span>
-                    <div class="relative z-10">
-                        <h3 class="text-2xl font-serif font-bold text-brand-darkblue mb-4">Διαδικτυακή Θεραπεία <br>& Προσβασιμότητα</h3>
-                        <p class="text-brand-text mb-8 text-base leading-relaxed">
-                            Οι υπηρεσίες προσφέρονται και διαδικτυακά (Online) για άτομα εκτός Αθηνών ή όσους προτιμούν τον χώρο τους. Αναγνωρίζοντας τις κοινωνικές ανάγκες, παρέχεται ειδική τιμολογιακή πολιτική (συνεδρίες 45') για φοιτητές και ανέργους.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Online (60')</span>
-                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium">Ειδικό κόστος (45')</span>
+                <div class="bg-white p-10 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 reveal flex flex-col justify-between">
+                    <div class="relative z-10 mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
+                            <i data-lucide="network" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-darkblue mb-4 leading-snug">Θεραπεία <br>Ομάδας</h3>
+                        <div class="text-brand-text text-sm leading-relaxed space-y-3">
+                            <p>«Η ομαδική θεραπεία αποτελεί μία συνθήκη, όπου το άτομο μοιράζεται τη δυσκολία του σε μία μικρή ομάδα ανθρώπων, που και αυτοί με τη σειρά τους έχουν τις δικές τους αγωνίες.»</p>
+                            <p>«Δημιουργείται έτσι μία μικρογραφία της κοινωνίας, όπου το άτομο πειραματίζεται σε νέες συμπεριφορές, αποδομώντας παλαιότερα και δημιουργώντας νέα, πιο λειτουργικά μοτίβα ζειν και φέρεσθαι, με τη βοήθεια του συντονιστή και των υπόλοιπων μελών.»</p>
+                            <p>«Μία δυναμωτική και θεραπευτική εμπειρία, αρκετά επίπεδα πάνω από την ατομική συνεδρία.»</p>
                         </div>
                     </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Διάρκεια: 120΄</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 reveal reveal-delay-1 flex flex-col justify-between">
+                    <div class="relative z-10 mb-8">
+                        <div class="w-12 h-12 rounded-xl bg-brand-light flex items-center justify-center mb-6 text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500">
+                            <i data-lucide="smile" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-brand-darkblue mb-4 leading-snug">Θεραπεία <br>Παιδιών και Εφήβων</h3>
+                        <div class="text-brand-text text-sm leading-relaxed space-y-3">
+                            <p>«Η πολυετής ενασχόληση και τριβή μας με παιδιά και εφήβους, έχει δημιουργήσει ένα ισχυρό υπόβαθρο υποστήριξης περιπτώσεων σχολικού άγχους, κρίσεων ζωής, συναισθηματικών δυσκολιών, εκρήξεων θυμού, επιθετικότητας, αναπτυξιακών προκλήσεων και προσωπικών ζητημάτων.»</p>
+                            <p>«Αφουγκραζόμενοι τις ανάγκες και τις αγωνίες τους, στεκόμαστε δίπλα στα παιδιά και στους εφήβους, σε μία διαδρομή προσωπικής ανάπτυξης και εξερεύνησης, μέσα σε ένα ασφαλές θεραπευτικό περιβάλλον.»</p>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Διάρκεια: 50΄</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-rows-2 gap-6 reveal reveal-delay-2">
+                    
+                    <div class="bg-white p-8 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 flex flex-col justify-between h-full">
+                        <div class="relative z-10 mb-4">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500 shrink-0">
+                                    <i data-lucide="monitor-smartphone" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="text-lg font-serif font-bold text-brand-darkblue leading-snug">Θεραπεία εξ Αποστάσεως <br>Διαδικτυακές Συνεδρίες</h3>
+                            </div>
+                            <p class="text-brand-text text-xs leading-relaxed">
+                                «Αναλαμβάνουμε συνεδρίες εξ αποστάσεως-διαδικτυακά (online), ατομικές και ζεύγους, εξυπηρετώντας τις ανάγκες των ανθρώπων που διαβιούν εκτός Αθηνών, όπως και στο εξωτερικό, καθώς και ατόμων, τα οποία δυσκολεύονται ή αδυνατούν να έχουν φυσική παρουσία στο γραφείο μας.»
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100">
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Online 50΄</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl group relative transition-all duration-500 hover:-translate-y-1 shadow-glass border border-brand-blue/10 flex flex-col justify-between h-full">
+                        <div class="relative z-10 mb-4">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="w-10 h-10 rounded-xl bg-brand-light flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all duration-500 shrink-0">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                                </div>
+                                <h3 class="text-lg font-serif font-bold text-brand-darkblue leading-snug">Θεραπεία για Όλους <br>Ειδικές Τιμές</h3>
+                            </div>
+                            <p class="text-brand-text text-xs leading-relaxed">
+                                «Αναγνωρίζοντας την ανάγκη του καθενός από εμάς για θεραπεία και προσωπική ανάπτυξη, προσφέρουμε συνεδρίες ειδικού χαμηλότερου κόστους σε φοιτητές και ανέργους.»
+                            </p>
+                        </div>
+                        <div class="pt-3 border-t border-gray-100">
+                            <span class="px-3 py-1 bg-brand-light text-brand-darkblue border border-brand-blue/10 text-xs rounded-full font-medium inline-block">Ειδικό Κόστος 40΄</span>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -367,60 +420,121 @@
 
     <section id="foundations" class="py-32 px-6 bg-brand-darkblue relative text-white">
         <div class="max-w-7xl mx-auto">
-            <div class="mb-16 reveal text-center lg:text-left">
+            <div class="mb-16 reveal text-center lg:text-left border-b border-white/10 pb-8">
                 <span class="text-brand-lightblue font-bold tracking-widest text-sm uppercase no-accents">Η ΘΕΡΑΠΕΥΤΙΚΗ ΜΟΥ ΤΑΥΤΟΤΗΤΑ</span>
-                <h2 class="text-4xl md:text-5xl font-serif mt-4 mb-6">Τα Θεμέλια της Προσέγγισής μου</h2>
-                <p class="text-blue-100 text-lg max-w-2xl mx-auto lg:mx-0">Συστημική Οπτική, Επιστημονική Εγκυρότητα & Βαθιά Ενσυναίσθηση.</p>
+                <h2 class="text-4xl md:text-5xl font-serif mt-4">Τα Θεμέλια της Προσέγγισής μου</h2>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
                 
-                <div class="bg-white/5 p-10 md:p-12 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal md:col-span-2 flex flex-col justify-center relative overflow-hidden">
-                    <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
-                        <i data-lucide="building-2" class="w-64 h-64 text-white"></i>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
-                            <i data-lucide="book-open" class="w-6 h-6 text-brand-lightblue"></i>
-                        </div>
-                        <h4 class="text-2xl font-bold mb-4 font-serif">Εκπαίδευση στο ΑΚΜΑ</h4>
-                        <p class="text-blue-100/80 text-base leading-relaxed max-w-xl">
-                            Η εκπαίδευσή μου και ο ρόλος μου ως συντονιστής στο Αθηναϊκό Κέντρο Μελέτης του Ανθρώπου (το ιστορικότερο κέντρο Συστημικής σκέψης στην Ελλάδα) εγγυάται το βάθος και την ποιότητα της προσέγγισης.
+                <div class="space-y-6 text-blue-100/90 text-lg font-light leading-relaxed reveal">
+                    <p>
+                        «Η εκπαίδευσή μου κατά τη διάρκεια των μεταπτυχιακών μου σπουδών ήταν Συνθετική, κάτι που σημαίνει ότι μελέτησα όλες τις κυρίαρχες προσεγγίσεις ψυχοθεραπείας, ενώ εκπαιδεύτηκα σε αρκετά μοντέλα ψυχοθεραπείας, με διαφορετικό επιστημονικό και θεωρητικό υπόβαθρο.»
+                    </p>
+                    <p>
+                        «Εμπιστεύτηκα για την προσωπική μου θεραπεία την Συστημική Προσέγγιση, την οποία και επέλεξα και ως κύρια ψυχοθεραπευτική σχολή για το επάγγελμά μου.»
+                    </p>
+                    <p>
+                        «Εκπαιδεύτηκα στο ΑΚΜΑ, για 8 έτη, παρακολουθώντας όλα τα απαιτούμενα σεμινάρια που οδηγούν στην Ευρωπαϊκή Πιστοποίηση στην Ψυχοθεραπεία. Υπό την αιγίδα του ΑΚΜΑ, συμμετείχα μαζί με ομάδα συνεργατών, σε κοινοτικές δράσεις ψυχικής ενδυνάμωσης και εποπτείας σε σχολεία και εργασιακά πλαίσια.»
+                    </p>
+                    <div class="pt-6 mt-6 border-t border-white/10">
+                        <p class="text-white italic">
+                            «Η Συστημική Θεραπεία αγκαλιάζει τον άνθρωπο ως κομμάτι ενός συστήματος, το οποίο επηρεάζει και επηρεάζεται από αυτό, και όχι απλά ως μία μονάδα αυτόνομη στον κόσμο.»
+                        </p>
+                        <p class="mt-4">
+                            «Αυτό την κάνει μοναδική σε αξία καθώς αφήνει αποτύπωμα και στο ευρύτερο περιβάλλον των ατόμων των οποίων θα την επιλέξουν για θεραπεία. Συχνά λέμε, ότι το άτομο με το οποίο δουλεύουμε μαζί, είναι ουσιαστικά ο «εκπρόσωπος» της οικογένειάς του, ως φορέας της θεραπευτικής αλλαγής.»
                         </p>
                     </div>
                 </div>
 
-                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-1 flex flex-col justify-center">
-                    <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
-                        <i data-lucide="puzzle" class="w-6 h-6 text-brand-lightblue"></i>
+                <div class="space-y-12">
+                    <div class="reveal reveal-delay-1">
+                        <h3 class="text-2xl font-serif text-white mb-6 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-lightblue/20 flex items-center justify-center">
+                                <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-lightblue"></i>
+                            </div>
+                            Η εκπαίδευσή μου συνοπτικά
+                        </h3>
+                        <ul class="space-y-4 text-blue-100/90 leading-relaxed font-light">
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-lightblue mt-1">•</span> 
+                                <span>Πτυχίο Ειδικής Αγωγής BA, ΠΤΕΑ, Πανεπιστήμιο Θεσσαλίας, 2005-2009.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-lightblue mt-1">•</span> 
+                                <span>Μεταπτυχιακό Δίπλωμα στη Συμβουλευτική Ψυχολογία MSc, ΠΤΕΑ, Πανεπιστήμιο Θεσσαλίας, 2011-2014.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-lightblue mt-1">•</span> 
+                                <span>Εκπαίδευση Συστημικού Θεραπευτή Ομάδας και Οικογένειας ECP, στο ΑΚΜΑ 2018-2025.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-lightblue mt-1">•</span> 
+                                <span>Πτυχίο Ψυχολογίας BA, ICPS College-University of Lancanster 2026-2028.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h4 class="text-xl font-bold mb-4 font-serif">Ειδική Αγωγή</h4>
-                    <p class="text-blue-100/80 text-sm leading-relaxed">
-                        Η πορεία μου ως σχολικός ψυχολόγος προσφέρει σπάνια, πρακτική ενσυναίσθηση για τις δυσκολίες παιδιών και γονέων.
-                    </p>
+
+                    <div class="reveal reveal-delay-2">
+                        <h3 class="text-2xl font-serif text-white mb-6 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-brand-lightblue/20 flex items-center justify-center">
+                                <i data-lucide="stethoscope" class="w-5 h-5 text-brand-lightblue"></i>
+                            </div>
+                            Κλινική Εμπειρία
+                        </h3>
+                        <p class="text-blue-100/90 leading-relaxed font-light space-y-4">
+                            <span class="block">«Στα πλαίσια της πρακτικής άσκησης για 1 έτος εργάστηκα στα εξωτερικά ιατρεία ψυχολόγων στο Αχιλλοπούλειο Νοσοκομείου Βόλου, κυρίως με ψυχιατρικής φύσεως περιστατικά. Την ίδια περίοδο διενεργούσα συνεδρίες εφήβων, στο γραφείο σχολικού ψυχολόγου, στο ΕΕΕΕΚ Βόλου.»</span>
+                            <span class="block">«Από το 2018, διατηρώ το προσωπικό μου γραφείο ψυχοθεραπείας, στο Παγκράτι, βλέποντας ενήλικες, ζευγάρια, εφήβους, παιδιά και οικογένειες.»</span>
+                            <span class="block">«Από το 2021 έως και το 2023, διετέλεσα μαζί με ομάδα συνεργατών, συντονιστής εκπαίδευσης ομάδων ενηλίκων, οι οποίοι εκπαιδεύονταν στο ΑΚΜΑ ως θεραπευτές. Από το 2022 συμμετέχω σε δράσεις στο πεδίο -σχολεία, επαγγελματικά πλαίσια, ιδρύματα, εκπαιδευτικές δομές, μαζί με ομάδα ψυχολόγων, στα πλαίσια πρακτικών ασκήσεων του ΑΚΜΑ.»</span>
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-2 flex flex-col justify-center">
-                    <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
-                        <i data-lucide="stethoscope" class="w-6 h-6 text-brand-lightblue"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="py-32 px-6 bg-brand-light relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="text-brand-blue font-bold tracking-widest text-sm uppercase no-accents">ΟΠΤΙΚΟΑΚΟΥΣΤΙΚΟ ΥΛΙΚΟ</span>
+                <h2 class="text-4xl md:text-5xl font-serif text-brand-darkblue mt-4 mb-6">Δράσεις & Συμμετοχές</h2>
+                <div class="w-16 h-1 bg-brand-blue mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
+                
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-card border border-gray-100 reveal">
+                    <div class="rounded-2xl overflow-hidden mb-6 bg-brand-light shadow-inner relative" style="padding-top: 56.25%;">
+                        <iframe src="https://player.mux.com/DY3LgAb024S9RoFND7IL58R1tDvDK00VzPc1xzR9mnXLM?metadata-video-title=Video&video-title=Video" class="absolute top-0 left-0 w-full h-full border-none" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen></iframe>
                     </div>
-                    <h4 class="text-xl font-bold mb-4 font-serif">Κλινική Εμπειρία</h4>
-                    <p class="text-blue-100/80 text-sm leading-relaxed">
-                        Η θητεία μου σε Νοσοκομεία και δομές Ε.Ε.Ε.Ε.Κ έχει θωρακίσει την ικανότητά μου να διαχειρίζομαι σύνθετες κρίσεις.
-                    </p>
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="video" class="w-6 h-6 text-brand-blue shrink-0 mt-1"></i>
+                        <p class="text-brand-text text-sm md:text-base leading-relaxed italic">
+                            «Από την εκδήλωση Καφέ Ψ, στο Καφενείο του Λουκά, στο Παγκράτι, τον Φεβρουάριο του 2025, προσκεκλημένος του ψυχαναλυτή Γιάννη Βαϊτσαρά, σε ένα διάλογο με θέμα : «Τρομερά μου συμπτώματα, Μη με εγκαταλείπετε!» «Τι θ’απογίνω χωρίς εσάς!», όπου αναλύσαμε τη λειτουργία των συμπτωμάτων, ως μηχανισμό αντίστασης και άμυνας του ατόμου στην εξέλιξή του.»
+                        </p>
+                    </div>
                 </div>
 
-                <div class="bg-white/5 p-10 md:p-12 rounded-3xl border border-white/10 hover:border-brand-lightblue transition-all duration-500 group reveal reveal-delay-3 md:col-span-2 flex flex-col justify-center relative overflow-hidden">
-                    <div class="absolute -right-10 -bottom-10 opacity-5 pointer-events-none group-hover:scale-110 transition-transform duration-700">
-                        <i data-lucide="network" class="w-64 h-64 text-white"></i>
-                    </div>
-                    <div class="relative z-10">
-                        <div class="w-12 h-12 rounded-xl bg-brand-lightblue/20 flex items-center justify-center mb-6">
-                            <i data-lucide="infinity" class="w-6 h-6 text-brand-lightblue"></i>
+                <div class="bg-white p-6 md:p-10 rounded-[2.5rem] shadow-card border border-gray-100 reveal reveal-delay-1">
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="rounded-2xl overflow-hidden cursor-zoom-in relative group" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/GIANNOULIS/refs/heads/main/Berlin%204.2026.jpg')">
+                            <img src="https://raw.githubusercontent.com/agelmet/GIANNOULIS/refs/heads/main/Berlin%204.2026.jpg" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105" alt="Δράση Berlin">
+                            <div class="absolute inset-0 bg-brand-darkblue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i data-lucide="maximize-2" class="w-6 h-6 text-white drop-shadow-lg"></i>
+                            </div>
                         </div>
-                        <h4 class="text-2xl font-bold mb-4 font-serif">Συστημική Οπτική</h4>
-                        <p class="text-blue-100/80 text-base leading-relaxed max-w-xl">
-                            Δεν βλέπω τον άνθρωπο ως μια "απομονωμένη μονάδα". Η λύση βρίσκεται πάντα στη βελτίωση των σχέσεών μας με τους κύκλους μας (οικογένεια, εργασία, κοινωνία).
+                        <div class="rounded-2xl overflow-hidden cursor-zoom-in relative group" onclick="openLightbox('https://raw.githubusercontent.com/agelmet/GIANNOULIS/refs/heads/main/Berlin%20II%204.2026.jpg')">
+                            <img src="https://raw.githubusercontent.com/agelmet/GIANNOULIS/refs/heads/main/Berlin%20II%204.2026.jpg" class="w-full h-48 md:h-64 object-cover transition-transform duration-700 group-hover:scale-105" alt="Δράση Berlin 2">
+                            <div class="absolute inset-0 bg-brand-darkblue/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i data-lucide="maximize-2" class="w-6 h-6 text-white drop-shadow-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="camera" class="w-6 h-6 text-brand-blue shrink-0 mt-1"></i>
+                        <p class="text-brand-text text-sm md:text-base leading-relaxed italic">
+                            «Δράση στις γειτονιές : «Λογοτεχνία και Ψυχοθεραπεία : Πώς η λογοτεχνία συναντά τα εσωτερικά μας μονοπάτια». Από τη δράση μας τον Απρίλιο του 2026, στο βιβλιοπωλείο Berlin στα Πετράλωνα, όπου με τον συνάδελφο και συνεργάτη Δημήτρη Σπύρου, κάναμε ένα βιωματικό εργαστήρι, συνδέοντας τη λογοτεχνία με την ψυχοθεραπευτική διεργασία.»
                         </p>
                     </div>
                 </div>
@@ -434,7 +548,9 @@
             <div class="text-center mb-20 reveal">
                 <span class="text-brand-blue font-bold tracking-widest text-sm uppercase no-accents">ΤΟ ΠΕΡΙΒΑΛΛΟΝ ΜΑΣ</span>
                 <h2 class="text-4xl md:text-5xl font-serif text-brand-darkblue mt-4 mb-6">Ο Χώρος στο Παγκράτι</h2>
-                <p class="text-brand-text max-w-3xl mx-auto text-lg">Στο γραφείο δημιουργείται ένα ασφαλές πλαίσιο όπου ενήλικες, ζευγάρια και γονείς μπορούν να κατανοήσουν τα μοτίβα των σχέσεών τους, να διαχειριστούν το άγχος ή το πένθος και να βρουν νέους, λειτουργικούς τρόπους επικοινωνίας.</p>
+                <p class="text-brand-text max-w-3xl mx-auto text-lg leading-relaxed">
+                    «Η φιλοσοφία είναι να νιώθει κανείς στο γραφείο της θεραπείας του ασφάλεια, άνεση και ζεστασιά.» «Έχει πολλά να «ακουμπήσει» εκεί μέσα.» «Με αυτή τη σκέψη φτιάξαμε ένα χώρο ανθρώπινο που να χωράει το δύσκολο, τον πόνο, την χαρά, την αγωνία και την ανακούφιση.»
+                </p>
             </div>
 
             <div class="masonry-grid w-full mx-auto pb-10">
